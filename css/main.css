@@ -82,12 +82,17 @@
 .card {
   width: 186px;
   height: 265px;
-  background: rgb(25,25,24);
+  background: #181818;
   padding: 1rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   gap: .5rem;
+}
+
+.card:hover {
+  background: hsla(0,0%,100%,.07);
+  transition: .2s ease;
 }
 
 .card img {

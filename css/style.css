@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6, p, span, a {
 }
 
 
-#main, #nav, #player {
+#main, #player {
   border-radius: 0.5rem;
   background: #131213;
 }
