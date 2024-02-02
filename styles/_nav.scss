@@ -1,0 +1,20 @@
+#navIcons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  i {
+    padding: 20px;
+    &::after {
+      font-size: 1rem;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      padding-left: 1rem;
+    }
+    &:nth-child(1)::after {
+      content: "Início";
+    }
+    &:nth-child(2)::after {
+      content: "Buscar";
+    }
+  }
+}

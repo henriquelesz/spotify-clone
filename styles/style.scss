@@ -1,0 +1,57 @@
+@import "_reset";
+
+$background-color: #131213;
+$gap-radius-pattern: .5rem;
+$nav-color: #B2B2B3;
+
+@mixin nav-titles {
+  font-size: 1rem;
+  color: $nav-color;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  padding-left: 1rem;
+}
+
+
+// Basic structure
+body {
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  grid-template-rows: 1fr 4.5rem;
+  background: #000;
+  gap: $gap-radius-pattern;
+  padding:$gap-radius-pattern;
+  main {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background: $background-color;
+    border-radius: $gap-radius-pattern;
+  }
+  #navBar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    gap: $gap-radius-pattern;
+    div {
+      background: $background-color;
+      border-radius: $gap-radius-pattern;
+    }
+  }
+  #player {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    background: $background-color;
+    border-radius: $gap-radius-pattern;
+  }
+}
+
+// Basic configuration
+
+i {
+  color: $nav-color;
+}
+
+@import "_main";
+@import "_nav";
+@import "_player";
