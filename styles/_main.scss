@@ -1,27 +1,84 @@
-main {
-  padding: 20px;
-  header {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    display: flex;
+    gap: 0.5rem;
+    &:nth-child(1) i {
+      padding: 16px 10px;
+      background-color: rgba(0, 0, 0, 0.489);
+      border-radius: $rounded-icon;
+    }
+    &:nth-child(2) i {
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.489);
+      border-radius: $rounded-icon;
+    }
+  }
+}
+
+#top-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap-radius-pattern;
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-top-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $card-background;
+    border-radius: $gap-radius-pattern;
+    padding-right: 1rem;
+    div {
+      display: flex;
+      align-items: center;
+      gap: $gap-radius-pattern;
+      color: #fff;
+      font-family: inherit;
+    }
+    img {
+      height: 48px;
+      width: 48px;
+      border-radius: $gap-radius-pattern 0 0 $gap-radius-pattern;
+    }
+  }
+}
+
+.user-content-row {
+  display: grid;
+  gap: $gap-radius-pattern;
+  .user-content-row-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-    div {
-      display: flex;
-      gap: .5rem;
-      &:nth-child(1) i {
-        padding: 16px 10px;
-        background-color: rgba(0, 0, 0, 0.489);
-        border-radius: 50px;
-      }
-      &:nth-child(2) i {
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.489);
-        border-radius: 50px;
-      }
+    h2 {
+      color: #fff;
+      font-weight: 400;
+    }
+    a {
+      color: $nav-color;
+      text-decoration: none;
     }
   }
-  #top-content {
+  .content-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    @include mobile {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .card {
+      background: $card-background;
+      padding: 14px 14px 20px 14px;
+      border-radius: $gap-radius-pattern;
+      color: #fff;
+      img {
+        border-radius: $gap-radius-pattern;
+        margin-bottom: $gap-radius-pattern;
+      }
+    }
   }
 }

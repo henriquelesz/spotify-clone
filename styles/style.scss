@@ -1,17 +1,17 @@
 @import "_reset";
 
 $background-color: #131213;
-$gap-radius-pattern: .5rem;
-$nav-color: #B2B2B3;
+$gap-radius-pattern: 0.5rem;
+$nav-color: #b2b2b3;
+$rounded-icon: 50%;
+$font: "Roboto", sans-serif;
+$card-background: hsla(0, 0%, 100%, 0.07);
 
-@mixin nav-titles {
-  font-size: 1rem;
-  color: $nav-color;
-  font-weight: 400;
-  font-family: "Roboto", sans-serif;
-  padding-left: 1rem;
+@mixin mobile {
+  @media (max-width: 1100px) {
+    @content;
+  }
 }
-
 
 // Basic structure
 body {
@@ -20,12 +20,18 @@ body {
   grid-template-rows: 1fr 4.5rem;
   background: #000;
   gap: $gap-radius-pattern;
-  padding:$gap-radius-pattern;
+  padding: $gap-radius-pattern;
+  font-family: $font;
+  height: 100vh;
   main {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     background: $background-color;
     border-radius: $gap-radius-pattern;
+    overflow-y: scroll;
+    padding: 20px;
+    display: grid;
+    gap: 1rem;
   }
   #navBar {
     grid-column: 1 / 2;
@@ -50,6 +56,7 @@ body {
 
 i {
   color: $nav-color;
+  cursor: pointer;
 }
 
 @import "_main";

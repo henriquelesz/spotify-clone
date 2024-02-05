@@ -1,0 +1,23 @@
+#player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: $gap-radius-pattern;
+    color: #fff;
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: $gap-radius-pattern;
+    }
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    span {
+      font-size: 0.9rem;
+    }
+  }
+}
