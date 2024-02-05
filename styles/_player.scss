@@ -20,4 +20,10 @@
       font-size: 0.9rem;
     }
   }
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap-radius-pattern;
+  }
 }
